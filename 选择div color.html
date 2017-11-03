@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <!--<script>-->
+        <!--document.getElementById('div').className="div1";-->
+        <!--function setColor(){-->
+            <!--document.getElementById('div1').style.background=document.getElementById('color').value;-->
+        <!--}-->
+        <!--function setWidth(chg){-->
+            <!--document.getElementById('div1').style['width']+=chg;-->
+        <!--}-->
+    <!--</script>-->
+    <script>
+        window.onload=function (){
+        var oDiv=document.getElementsByTagName('div');
+            var aBtn1=document.getElementById('btn1');
+            var aBtn2=document.getElementById('b2');
+            var aBtn3=document.getElementById('b3');
+            var aBtn4=document.getElementById('b4');
+            var aBtn5=document.getElementById('b5');
+        oDiv[0].className="div1";
+        aBtn1.onclick=function(){
+            oDiv[0].style.background=document.getElementById('color').value;
+        };
+        aBtn2.onclick=function(){
+            oDiv[0].style.width=oDiv[0].offsetWidth+10+'px';
+        };
+        aBtn3.onclick=function(){
+            oDiv[0].style.width=oDiv[0].offsetWidth-10+'px';
+        };
+        aBtn4.onclick=function(){
+            oDiv[0].style.height=oDiv[0].offsetHeight+10+'px';
+        };
+        aBtn5.onclick=function(){
+            oDiv[0].style.height=oDiv[0].offsetHeight-10+'px';
+        };
+        };
+    </script>
+</head>
+<body>
+<input type="color" id="color">
+<div></div>
+<input type="button" value="试一下" id="btn1">
+<button id="b2">变宽</button>
+<button id="b3">变瘦</button>
+<button id="b4">变高</button>
+<button id="b5">变矮</button>
+</body>
+</html>
